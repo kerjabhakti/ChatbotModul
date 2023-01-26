@@ -406,7 +406,7 @@ module.exports = msgHandler = async (client, message) => {
         const isQuotedImage = quotedMsg && quotedMsg.type === 'image'
         
 
-        const vhtearkey = 'Ucok 2k99KKYli' // https://api.vhtear.com
+        const vhtearkey = 'ITEUNG V22k99KKYli' // https://api.vhtear.com
         //const barbarkey = 'xXvQeSgB0iWpJbri4TyU' // https://mhankbarbar.herokuapp.com/api
 
         const errorurl = 'https://steamuserimages-a.akamaihd.net/ugc/954087817129084207/5B7E46EE484181A676C02DFCAD48ECB1C74BC423/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false'
@@ -578,7 +578,7 @@ module.exports = msgHandler = async (client, message) => {
                             .then(() => client.removeParticipant(groupId, sender.id))
                             .then(() => {
                                 client.sendText(from, `*「 ANTI BADWORD 」*\nKamu mengirimkan link grup chat, maaf kamu di kick dari grup 🙁`)
-                            }).catch(() => client.sendText(from, `Untung Ucok  BOT Bukan Admin, Kalo Jadi Admin Udah Aku Kick Tuh! 😑`))
+                            }).catch(() => client.sendText(from, `Untung ITEUNG V2 BOT Bukan Admin, Kalo Jadi Admin Udah Aku Kick Tuh! 😑`))
                         } else {
                             return client.reply(from, "Tolong Jaga Ucapan Min 😇", id)
                         }
@@ -662,7 +662,7 @@ module.exports = msgHandler = async (client, message) => {
             break
 
         case '#antilink':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (!isGroupMsg) return client.reply(from, `Perintah ini hanya bisa di gunakan dalam group!`, id)
             if (!isGroupAdmins) return client.reply(from, `Perintah ini hanya bisa di gunakan oleh Admin group!`, id)
             if (!isBotGroupAdmins) return client.reply(from, `Perintah ini hanya bisa di gunakan jika Bot menjadi Admin!`, id)
@@ -691,28 +691,28 @@ module.exports = msgHandler = async (client, message) => {
             break   
 
         case '#antibadword':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (!isGroupMsg) return client.reply(from, `Perintah ini hanya bisa di gunakan dalam group!`, id)
             if (!isGroupAdmins) return client.reply(from, `Perintah ini hanya bisa di gunakan oleh Admin group!`, id)
             if (!isBotGroupAdmins) return client.reply(from, `Perintah ini hanya bisa di gunakan jika Bot menjadi Admin!`, id)
             if (args[1] == 'enable') {
                 var cek = antibadword.includes(chatId);
                 if(cek){
-                    return client.reply(from, `*「 ANTI BADWORD 」*\nPerhatian Untuk Member Grup ${name} Tercinta\nHarap Jangan Toxic Di Sini Atau Ucok  BOT Akan Kick!`, id)
+                    return client.reply(from, `*「 ANTI BADWORD 」*\nPerhatian Untuk Member Grup ${name} Tercinta\nHarap Jangan Toxic Di Sini Atau ITEUNG V2 BOT Akan Kick!`, id)
                 } else {
                     antibadword.push(chatId)
                     fs.writeFileSync('./settings/antibadword.json', JSON.stringify(antibadword))
-                    client.reply(from, `*「 ANTI BADWORD 」*\nPerhatian Untuk Member Grup ${name} Tercinta\nHarap Jangan Toxic Di Sini Atau Ucok  BOT Akan Kick!`, id)
+                    client.reply(from, `*「 ANTI BADWORD 」*\nPerhatian Untuk Member Grup ${name} Tercinta\nHarap Jangan Toxic Di Sini Atau ITEUNG V2 BOT Akan Kick!`, id)
                 }
             } else if (args[1] == 'disable') {
                 var cek = antibadword.includes(chatId);
                 if(!cek){
-                    return client.reply(from, `*「 ANTI BADWORD 」*\nPerhatian Untuk Member Grup ${name} Tercinta\nHarap Jangan Toxic Di Sini Atau Ucok  BOT Akan Kick!`, id)
+                    return client.reply(from, `*「 ANTI BADWORD 」*\nPerhatian Untuk Member Grup ${name} Tercinta\nHarap Jangan Toxic Di Sini Atau ITEUNG V2 BOT Akan Kick!`, id)
                 } else {
                     let nixx = antibadword.indexOf(chatId)
                     antibadword.splice(nixx, 1)
                     fs.writeFileSync('./settings/antibadword.json', JSON.stringify(antibadword))
-                    client.reply(from, `*「 ANTI BADWORD 」*\nPerhatian Untuk Member Grup ${name} Tercinta\nHarap Jangan Toxic Di Sini Atau Ucok  BOT Akan Kick!`, id)
+                    client.reply(from, `*「 ANTI BADWORD 」*\nPerhatian Untuk Member Grup ${name} Tercinta\nHarap Jangan Toxic Di Sini Atau ITEUNG V2 BOT Akan Kick!`, id)
                 }
             } else {
                 client.reply(from, `Pilih enable atau disable !`, id)
@@ -720,8 +720,8 @@ module.exports = msgHandler = async (client, message) => {
             break   
 
         case '#addprem':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
-            if (!isOwner) return client.reply(from, 'Perintah ini hanya bisa di gunakan oleh Owner Ucok  BOT!', id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isOwner) return client.reply(from, 'Perintah ini hanya bisa di gunakan oleh Owner ITEUNG V2 BOT!', id)
                 const addprem = body.slice(9)
                 {
                 premiumNumber.push(addprem+'@c.us')
@@ -731,8 +731,8 @@ module.exports = msgHandler = async (client, message) => {
             break
 
         case '#delprem':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
-            if (!isOwner) return client.reply(from, 'Perintah ini hanya bisa di gunakan oleh Owner Ucok  BOT!', id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isOwner) return client.reply(from, 'Perintah ini hanya bisa di gunakan oleh Owner ITEUNG V2 BOT!', id)
                 const delprem = body.slice(9)
                 let inq = premiumNumber.indexOf(delprem+'@c.us') 
                 premiumNumber.splice(inq, 1)
@@ -810,7 +810,7 @@ module.exports = msgHandler = async (client, message) => {
             break
 
         case '#quran':
-            //if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            //if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (!isGroupMsg) return client.reply(from, `Perintah ini hanya bisa di gunakan dalam group!`, id)
             if (isLimit(serial)) return client.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu`, id)
             if (args.length === 1) return client.reply(from, `Kirim perintah Surah Quran kamu dengan cara ketik perintah :\n*#quran* [ Urutan Surat ]\nContoh :\n*#quran 1*`, id)
@@ -863,7 +863,7 @@ module.exports = msgHandler = async (client, message) => {
 
         case '#afk':
                 if (!isPrem) return client.reply(from, `${ubah}Perintah ini hanya untuk user premium! hubungi owner untuk upgrade premium atau ketik #owner${ubah}`, id)
-                //if (!isOwner) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user owner Ucok  BOT', id)
+                //if (!isOwner) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user owner ITEUNG V2 BOT', id)
                 const qa = args.join(' ').slice(5)
                 if (!isGroupMsg) return await client.reply(from, ind.groupOnly(), id)
                 if (isAfkOn) return await client.reply(from, ind.afkOnAlready(), id)
@@ -1104,7 +1104,7 @@ module.exports = msgHandler = async (client, message) => {
             axios.get(apalo).then((result) => {
                 var b = JSON.parse(JSON.stringify(result.data));
                 var cewek =  b[Math.floor(Math.random() * b.length)];
-                client.sendFileFromUrl(from, cewek, 'cowo.jpg', 'aku ganteng gak\n\nby:Ucok ', id)
+                client.sendFileFromUrl(from, cewek, 'cowo.jpg', 'aku ganteng gak\n\nby:ITEUNG V2', id)
             });
             break
 
@@ -1175,7 +1175,7 @@ ${desc}`)
             break*/
 
         case '#addlimit':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (!isOwner, !isPrem) return client.reply(from, 'Perintah ini hanya untuk Owner & Admin bot', id)
             var found = false;
                     Object.keys(limit).forEach((i) => {
@@ -1249,7 +1249,7 @@ ${desc}`)
 
         case '#iph':
             if (isLimit(serial)) return client.reply(from, `${ubah}Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu${ubah}`, id)
-            if (args.length == 1) return client.reply(from, `kirim dengan\n\nPenggunaan: #iph Ucok |bot`, id)
+            if (args.length == 1) return client.reply(from, `kirim dengan\n\nPenggunaan: #iph ITEUNG V2|bot`, id)
             client.reply(from, '[WAIT] Sedang di proses⏳ silahkan tunggu ± 1 min!', id)
             const t = body.slice(5).split('|')[0]
             const text25 = body.split('|')[1]
@@ -1287,7 +1287,7 @@ ${desc}`)
 
         case '#ift':
             if (isLimit(serial)) return client.reply(from, `${ubah}Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu${ubah}`, id)
-            if (args.length == 1) return client.reply(from, `kirim dengan\n\nPenggunaan: #ift Ucok `, id)
+            if (args.length == 1) return client.reply(from, `kirim dengan\n\nPenggunaan: #ift ITEUNG V2`, id)
             client.reply(from, '[WAIT] Sedang di proses⏳ silahkan tunggu ± 1 min!', id)
             const tt = body.slice(5).split('|')[0]
             try {
@@ -1323,7 +1323,7 @@ ${desc}`)
 
         case '#ise':
             if (isLimit(serial)) return client.reply(from, `${ubah}Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu${ubah}`, id)
-            if (args.length == 1) return client.reply(from, `kirim dengan\n\nPenggunaan: #ise Ucok `, id)
+            if (args.length == 1) return client.reply(from, `kirim dengan\n\nPenggunaan: #ise ITEUNG V2`, id)
             client.reply(from, '[WAIT] Sedang di proses⏳ silahkan tunggu ± 1 min!', id)
             const ttt = body.slice(5).split('|')[0]
             try {
@@ -1359,7 +1359,7 @@ ${desc}`)
 
         case '#ims':
             if (isLimit(serial)) return client.reply(from, `${ubah}Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu${ubah}`, id)
-            if (args.length == 1) return client.reply(from, `kirim dengan\n\nPenggunaan: #ims Ucok |bot`, id)
+            if (args.length == 1) return client.reply(from, `kirim dengan\n\nPenggunaan: #ims ITEUNG V2|bot`, id)
             client.reply(from, '[WAIT] Sedang di proses⏳ silahkan tunggu ± 1 min!', id)
             const tttt = body.slice(5).split('|')[0]
         const text23 = body.split('|')[1]
@@ -1397,7 +1397,7 @@ ${desc}`)
 
         case '#imr':
             if (isLimit(serial)) return client.reply(from, `${ubah}Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu${ubah}`, id)
-            if (args.length == 1) return client.reply(from, `kirim dengan\n\nPenggunaan: #imr Ucok |bot`, id)
+            if (args.length == 1) return client.reply(from, `kirim dengan\n\nPenggunaan: #imr ITEUNG V2|bot`, id)
             client.reply(from, '[WAIT] Sedang di proses⏳ silahkan tunggu ± 1 min!', id)
             const ttttt = body.slice(5).split('|')[0]
             const text24 = body.split('|')[1]
@@ -1435,7 +1435,7 @@ ${desc}`)
 
         case '#img':
             if (isLimit(serial)) return client.reply(from, `${ubah}Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu${ubah}`, id)
-            if (args.length == 1) return client.reply(from, `kirim dengan\n\nPenggunaan: #img Ucok |bot`, id)
+            if (args.length == 1) return client.reply(from, `kirim dengan\n\nPenggunaan: #img ITEUNG V2|bot`, id)
             client.reply(from, '[WAIT] Sedang di proses⏳ silahkan tunggu ± 1 min!', id)
             const tttttt = body.slice(5).split('|')[0]
         const text21 = body.split('|')[1]
@@ -1473,7 +1473,7 @@ ${desc}`)
 
         case '#irg':
             if (isLimit(serial)) return client.reply(from, `${ubah}Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu${ubah}`, id)
-            if (args.length == 1) return client.reply(from, `kirim dengan\n\nPenggunaan: #irg Ucok |bot`, id)
+            if (args.length == 1) return client.reply(from, `kirim dengan\n\nPenggunaan: #irg ITEUNG V2|bot`, id)
             client.reply(from, '[WAIT] Sedang di proses⏳ silahkan tunggu ± 1 min!', id)
             const ttttttt = body.slice(5).split('|')[0]
         const text22 = body.split('|')[1]
@@ -1511,7 +1511,7 @@ ${desc}`)
 
         case '#inl':
             if (isLimit(serial)) return client.reply(from, `${ubah}Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu${ubah}`, id)
-            if (args.length == 1) return client.reply(from, `kirim dengan\n\nPenggunaan: #inl Ucok |bot`, id)
+            if (args.length == 1) return client.reply(from, `kirim dengan\n\nPenggunaan: #inl ITEUNG V2|bot`, id)
             client.reply(from, '[WAIT] Sedang di proses⏳ silahkan tunggu ± 1 min!', id)
             const tttttttt = body.slice(5).split('|')[0]
             try {
@@ -1548,7 +1548,7 @@ ${desc}`)
 
         case '#icg':
             if (isLimit(serial)) return client.reply(from, `${ubah}Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu${ubah}`, id)
-            if (args.length == 1) return client.reply(from, `kirim dengan\n\nPenggunaan: #icg Ucok |bot`, id)
+            if (args.length == 1) return client.reply(from, `kirim dengan\n\nPenggunaan: #icg ITEUNG V2|bot`, id)
             client.reply(from, '[WAIT] Sedang di proses⏳ silahkan tunggu ± 1 min!', id)
             const ttttttttt = body.slice(5).split('|')[0]
             try {
@@ -1834,7 +1834,7 @@ ${desc}`)
 
         case '#owner':
         case '#creator':
-            client.sendContact(chatId, `6281374347075@c.us`)
+            client.sendContact(chatId,`6281374347075@c.us`)
             client.reply(from, 'tu owner saya:) ada yang di tanyakan, jangan di spam atau telpon', id)
             break
 
@@ -2108,7 +2108,7 @@ ${desc}`)
             if (isLimit(serial)) return client.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu`, id)
             
             await limitAdd(serial)
-            if (args.length === 1) return client.reply(from, `Kirim perintah *#ramalpasangan [kamu|pasangan]*\nContoh : *#ramalpasangan Ucok |${pushname}*`, id)
+            if (args.length === 1) return client.reply(from, `Kirim perintah *#ramalpasangan [kamu|pasangan]*\nContoh : *#ramalpasangan ITEUNG V2|${pushname}*`, id)
             arg = body.trim().split('|')
             if (arg.length >= 2) {
             client.reply(from, mess.wait, id)
@@ -2595,7 +2595,7 @@ ${desc}`)
                 heho += '╠➥'
                 heho += ` @${groupMek[i].id.replace(/@c.us/g, '')}\n`
             }
-            heho += '╚═〘 Ucok  BOT 〙✪══'
+            heho += '╚═〘 ITEUNG V2 BOT 〙✪══'
             await sleep(2000)
             await client.sendTextWithMentions(from, heho)
             break
@@ -2610,7 +2610,7 @@ ${desc}`)
                 hehe += '╠➥'
                 hehe += ` @${groupMem[i].id.replace(/@c.us/g, '')}\n`
             }
-            hehe += '╚═〘 Ucok  BOT 〙✪══'
+            hehe += '╚═〘 ITEUNG V2 BOT 〙✪══'
             await sleep(2000)
             await client.sendTextWithMentions(from, hehe)
             break
@@ -2682,7 +2682,7 @@ ${desc}`)
             break
 
         case '#ban':
-            if (!isAdmin) return client.reply(from, 'Perintah ini hanya bisa di gunakan oleh admin Ucok  BOT!', id)
+            if (!isAdmin) return client.reply(from, 'Perintah ini hanya bisa di gunakan oleh admin ITEUNG V2 BOT!', id)
                 for (let i = 0; i < mentionedJidList.length; i++) {
                 banned.push(mentionedJidList[i])
                 fs.writeFileSync('./settings/banned.json', JSON.stringify(banned))
@@ -2697,7 +2697,7 @@ ${desc}`)
             break
 
         case '#unban':
-            if (!isAdmin) return client.reply(from, 'Perintah ini hanya bisa di gunakan oleh admin Ucok !', id)
+            if (!isAdmin) return client.reply(from, 'Perintah ini hanya bisa di gunakan oleh admin ITEUNG V2!', id)
                 let xnxx = banned.indexOf(args[0]+'@c.us')
                 banned.splice(xnxx, 0)
                 fs.writeFileSync('./settings/banned.json', JSON.stringify(banned))
@@ -2705,8 +2705,8 @@ ${desc}`)
             break
 
         case '#block':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id) 
-            if (!isOwner) return client.reply(from, 'Perintah ini hanya bisa di gunakan oleh Owner Ucok  BOT!', id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id) 
+            if (!isOwner) return client.reply(from, 'Perintah ini hanya bisa di gunakan oleh Owner ITEUNG V2 BOT!', id)
             for (let i = 0; i < mentionedJidList.length; i++) {
                 let unblock = `${mentionedJidList[i]}`
                 await client.contactBlock(unblock).then((a)=>{
@@ -2717,8 +2717,8 @@ ${desc}`)
             break
 
         case '#unblock':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
-            if (!isOwner) return client.reply(from, 'Perintah ini hanya bisa di gunakan oleh Owner Ucok  BOT!', id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isOwner) return client.reply(from, 'Perintah ini hanya bisa di gunakan oleh Owner ITEUNG V2 BOT!', id)
             for (let i = 0; i < mentionedJidList.length; i++) {
                 let unblock = `${mentionedJidList[i]}`
                 await client.contactUnblock(unblock).then((a)=>{
@@ -2874,7 +2874,7 @@ ${desc}`)
             break
 
         case '#groupwa':
-            client.reply(from, `Link Group Ucok  BOT
+            client.reply(from, `Link Group ITEUNG V2 BOT
             group 1 : https://chat.whatsapp.com/I1OkU7uXLXTCfRgTMpRKu2
             group 2 : https://chat.whatsapp.com/I1OkU7uXLXTCfRgTMpRKu2\nJangan Lupa Join Ya Kak ${pushname}`, id)
             break
@@ -2931,8 +2931,8 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             })
             break
 
-        case '#Ucok admin':
-            let admn = `This is list of Ucok  Admin\nTotal : ${adminNumber.length}\n`
+        case '#ITEUNG V2admin':
+            let admn = `This is list of ITEUNG V2 Admin\nTotal : ${adminNumber.length}\n`
             for (let i of adminNumber) {
                 admn += `➸ ${i.replace(/@c.us/g,'')}\n`
             }
@@ -2979,14 +2979,14 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
         case `${prefix}sth`:
-                    if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+                    if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
                     const stha = body.slice(5)
                     if (stha.length > 10) return client.reply(from, 'Teksnya kepanjangan sayang', id)
                     client.reply(from, mess.wait, id)
                     client.sendFileFromUrl(from, "https://api.vhtear.com/hartatahta?text=" + stha + "&apikey=" + vhtearkey)
                     break
         case `${prefix}bp`:
-                    if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+                    if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
                     const sthaa = body.slice(4)
                     if (sthaa.length > 10) return client.reply(from, 'Teksnya kepanjangan sayang', id)
                     client.reply(from, mess.wait, id)
@@ -3008,7 +3008,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
         case '#wait':
-             if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)           
+             if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)           
              if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id) 
              if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
              if (isLimit(serial)) return client.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu`, id)
@@ -3056,7 +3056,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
         case `${prefix}ttps`:
-                    if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+                    if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
                     if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id)
                     if (quotedMsg) {
                         const quoteText = quotedMsg.type == 'chat' ? quotedMsg.body : quotedMsg.type == 'image' ? quotedMsg.caption : ''
@@ -3068,17 +3068,17 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
                     break
 
         case '#ttp2':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id)
             if (isLimit(serial)) return client.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu`, id)
-            if (args.length === 1) return client.reply(from, `Kirim perintah *#ttp2 [ Teks ]*, contoh *#ttp2 Ucok *`, id)
+            if (args.length === 1) return client.reply(from, `Kirim perintah *#ttp2 [ Teks ]*, contoh *#ttp2 ITEUNG V2*`, id)
             const ttp2t = body.slice(6)
             const lttp2 = ["Orange","White","Green","Black","Purple","Red","Yellow","Blue","Navy","Grey","Magenta","Brown","Gold"]
             const rttp2 = lttp2[Math.floor(Math.random() * (lttp2.length))]
             await client.sendStickerfromUrl(from, `https://api.vhtear.com/textmaker?text=${ttp2t}&warna=${rttp2}&apikey=${vhtearkey}`)
             break
         case '#ttg':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id)
             if (!isGroupMsg) return client.reply(from, `Perintah ini hanya bisa di gunakan dalam group!`, id)
             if (isLimit(serial)) return client.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu`, id)
@@ -3098,7 +3098,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
         case prefix+'lovemessage':
-            if (args.length === 1) return client.reply(from, `Kirim perintah *${prefix}lovemessage [ Teks ]*, contoh *${prefix}lovemessage Ucok *`, id)
+            if (args.length === 1) return client.reply(from, `Kirim perintah *${prefix}lovemessage [ Teks ]*, contoh *${prefix}lovemessage ITEUNG V2*`, id)
             client.reply(from, mess.wait, id)
             const lovemsg = body.slice(12)
             if (lovemsg.length > 10) return client.reply(from, '*Teks Terlalu Panjang!*\n_Maksimal 10 huruf!_', id)
@@ -3106,7 +3106,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
         case prefix+'romance':
-            if (args.length === 1) return client.reply(from, `Kirim perintah *${prefix}romance [ Teks ]*, contoh *${prefix}romance Ucok *`, id)
+            if (args.length === 1) return client.reply(from, `Kirim perintah *${prefix}romance [ Teks ]*, contoh *${prefix}romance ITEUNG V2*`, id)
             client.reply(from, mess.wait, id)
             const rmnc = body.slice(9)
             if (rmnc.length > 10) return client.reply(from, '*Teks Terlalu Panjang!*\n_Maksimal 10 huruf!_', id)
@@ -3114,7 +3114,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
         case prefix+'party':
-            if (args.length === 1) return client.reply(from, `Kirim perintah *${prefix}party [ Teks ]*, contoh *${prefix}party Ucok *`, id)
+            if (args.length === 1) return client.reply(from, `Kirim perintah *${prefix}party [ Teks ]*, contoh *${prefix}party ITEUNG V2*`, id)
             client.reply(from, mess.wait, id)
             const prty = body.slice(7)
             if (prty.length > 10) return client.reply(from, '*Teks Terlalu Panjang!*\n_Maksimal 10 huruf!_', id)
@@ -3122,7 +3122,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
         case prefix+'silk':
-            if (args.length === 1) return client.reply(from, `Kirim perintah *${prefix}silk [ Teks ]*, contoh *${prefix}silk Ucok *`, id)
+            if (args.length === 1) return client.reply(from, `Kirim perintah *${prefix}silk [ Teks ]*, contoh *${prefix}silk ITEUNG V2*`, id)
             client.reply(from, mess.wait, id)
             const slkz = body.slice(5)
             if (slkz.length > 10) return client.reply(from, '*Teks Terlalu Panjang!*\n_Maksimal 10 huruf!_', id)
@@ -3144,8 +3144,8 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
         case '#listprem':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
-            let lv = `Ini adalah list User premium Ucok  BOT\nTotal : ${premiumNumber.length}\n`
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            let lv = `Ini adalah list User premium ITEUNG V2 BOT\nTotal : ${premiumNumber.length}\n`
             for (let i of premiumNumber) {
                 lv += `➸ ${i.replace(/@c.us/g,'')}\n`
             }
@@ -3153,7 +3153,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
         case '#nekopoi':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
             if (!isNsfw) return client.reply(from, 'command/Perintah NSFW belum di aktifkan di group ini!', id)
             if (args.length === 1) return client.reply(from, 'Kirim perintah *#nekopoi [linkNekopoi]*\nContoh : *#nekopoi https://nekopoi.care/tsunpuri-episode-1-subtitle-indonesia/*', id)
@@ -3173,7 +3173,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
         case '#subreddit':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             arg = body.trim().split(' ')
             const sr = arg[1]
             try {
@@ -3194,7 +3194,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
         case '#reader': 
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id)
            if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)                
            if (!quotedMsg) return client.reply(from, 'Balas/reply pesan saya kak', id)
@@ -3210,7 +3210,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
            break
 
         case '#pink':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
              if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id)
              if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
              const jrenge = body.slice(6)
@@ -3220,10 +3220,10 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
              await client.sendFileFromUrl(from, `https://api.vhtear.com/blackpinkicon?text=${jrenge}&apikey=${vhtearkey}`,`${jrenge}.jpg`,`dah jadi gan`, id)        
              break
         case `#thunder`:
-                if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+                if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
                 if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id)
                 if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya dapat digunakan didalam Group', id)
-                if (args.length === 1)return client.reply(from, `Kirim perintah ${prefix}thunder [text].\nContoh: ${prefix}thunder Ucok `, id)
+                if (args.length === 1)return client.reply(from, `Kirim perintah ${prefix}thunder [text].\nContoh: ${prefix}thunder ITEUNG V2`, id)
                 if (isLimit(serial)) return client.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis.`, id)
                 const th = body.slice(9)
                 const tu = `https://api.vhtear.com/thundertext?text=${th}&apikey=${vhtearkey}`
@@ -3232,14 +3232,14 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
                 await limitAdd(serial)
                 break
         case '#graffity':
-        if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+        if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
         if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id)
         const graffity = body.slice(10)
         const graffitystrz = await get.get('http://inyourdream.herokuapp.com/graffity?kata=' + graffity).json()
         client.sendFileFromUrl(from, graffitystrz.status, id)
         break
         case '#katacinta':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id)
             fetch('https://raw.githubusercontent.com/beniismael/whatsapp-bot/master/bucin.txt')
             .then(res => res.text())
@@ -3275,7 +3275,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
                     break
 
         case '#shopee':
-                if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+                if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
                 if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id)
                 if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
                 if (isLimit(serial)) return client.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik _limit Untuk Mengecek Kuota Limit Kamu`, id)
@@ -3298,7 +3298,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
                 break
 
         case '#zodiak':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
             if (isLimit(serial)) return client.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu`, id)
             
@@ -3317,7 +3317,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
            break
 
         case '#tebakgambar':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id)  
             if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
             if (isLimit(serial)) return client.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu`, id)
@@ -3343,7 +3343,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
            break
 
         case '#heroml':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
             if (isLimit(serial)) return client.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu`, id)
             
@@ -3362,14 +3362,14 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
         case '#tahta':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)           
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)           
             if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id)  
             if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
             if (isLimit(serial)) return client.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu`, id)
     
              await limitAdd(serial)
              const jreng = body.slice(7)
-             if (!jreng) return client.reply(from, 'Kirim perintah *#tahta [teks]*\n\nContoh *#tahta Ucok  BOT*', id)
+             if (!jreng) return client.reply(from, 'Kirim perintah *#tahta [teks]*\n\nContoh *#tahta ITEUNG V2 BOT*', id)
              if (jreng.length > 7) return client.reply(from, 'Maksimal 7 Huruf!', id)
              client.sendText(from, '_Sedang diproses, mohon tunggu sebentar!..._', id)
              await client.sendFileFromUrl(from, `https://api.vhtear.com/hartatahta?text=${jreng}&apikey=${vhtearkey}`,`${jreng}.jpg`,`Harta Tahta ${jreng}`, id)        
@@ -3377,7 +3377,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
 
 
         case `${prefix}unreg`: //menghapus nomor dari database
-                    if (!isOwner) return client.reply(from, 'Fitur ini hanya dapat digunakan oleh Owner Ucok ')
+                    if (!isOwner) return client.reply(from, 'Fitur ini hanya dapat digunakan oleh Owner ITEUNG V2')
                     if (args.length === 1) return aksa.reply(from, 'Masukkan nomornya, *GUNAKAN AWALAN 62* contoh: 6281374347075')
                     let inx = daftar.indexOf(args[1] + '@c.us')
                     daftar.splice(inx, 1)
@@ -3386,7 +3386,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
                     break
 
         case `${prefix}yourpic`:
-                    if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)           
+                    if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)           
                     if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
                     for (let i = 0; i < mentionedJidList.length; i++) {
                         var ypic = await client.getProfilePicFromServer(mentionedJidList[i])
@@ -3400,7 +3400,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
                     break
 
                 case `${prefix}mypic`:
-                    if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)           
+                    if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)           
                     if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
                     const mpic = await client.getProfilePicFromServer(author)
                     if (mpic === undefined) {
@@ -3437,7 +3437,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
                     break
 
         case '#math':
-             if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)           
+             if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)           
             if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id) 
                 if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
             if (args.length === 1) return client.reply(from, '[❗] Kirim perintah *#math [ Angka ]*\nContoh : #math 12*12\n*NOTE* :\n- Untuk Perkalian Menggunakan *\n- Untuk Pertambahan Menggunakan +\n- Untuk Pengurangan Mennggunakan -\n- Untuk Pembagian Menggunakan /', id)
@@ -3450,9 +3450,9 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
         break
 
         case '#pornhub':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)           
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)           
             if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
-            if (args.length === 1) return client.reply(from, `Kirim perintah #pornhub [ |Teks1|Teks2 ], contoh #pornhub |Ucok |robot`, id)
+            if (args.length === 1) return client.reply(from, `Kirim perintah #pornhub [ |Teks1|Teks2 ], contoh #pornhub |ITEUNG V2|robot`, id)
             argz = body.trim().split('|')
             if (argz.length >= 2) {
                 client.reply(from, mess.wait, id)
@@ -3463,7 +3463,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
                 client.sendFileFromUrl(from, `https://api.vhtear.com/pornlogo?text1=${lpornhub}&text2=${lpornhub2}&apikey=${vhtearkey}`)
                 await limitAdd(serial)
             } else {
-                await client.reply(from, `Wrong Format!\n[❗] Kirim perintah #pornhub [ |Teks1|Teks2 ], contoh #pornhub |Ucok |robot`, id)
+                await client.reply(from, `Wrong Format!\n[❗] Kirim perintah #pornhub [ |Teks1|Teks2 ], contoh #pornhub |ITEUNG V2|robot`, id)
             }
             break
 
@@ -3476,7 +3476,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
                         break
 
         case '#setgroupname':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (!isGroupMsg) return client.reply(from, `Fitur ini hanya bisa di gunakan dalam group`, id)
             if (!isGroupAdmins) return client.reply(from, `Fitur ini hanya bisa di gunakan oleh admin group`, id)
             if (!isBotGroupAdmins) return client.reply(from, `Fitur ini hanya bisa di gunakan ketika bot menjadi admin`, id)
@@ -3489,7 +3489,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
         case '#getpic':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id)
             if (!isGroupMsg) return client.reply(from, `Fitur ini hanya bisa di gunakan dalam group`, id)
             const texnugm = body.slice(8)
@@ -3505,7 +3505,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
         case '#setprofilepic':
-            if (!isOwner) return client.reply(from, `Perintah ini hanya bisa di gunakan oleh Owner Ucok  bot!`, id)
+            if (!isOwner) return client.reply(from, `Perintah ini hanya bisa di gunakan oleh Owner ITEUNG V2 bot!`, id)
             if (isMedia) {
                 const mediaData = await decryptMedia(message)
                 const imageBase64 = `data:${mimetype};base64,${mediaData.toString('base64')}`
@@ -3522,21 +3522,21 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
         case '#setname':
-            if (!isOwner) return client.reply(from, `Perintah ini hanya bisa di gunakan oleh Owner Ucok  bot!`, id)
+            if (!isOwner) return client.reply(from, `Perintah ini hanya bisa di gunakan oleh Owner ITEUNG V2 bot!`, id)
                 const setnem = body.slice(9)
                 await client.setMyName(setnem)
                 client.sendTextWithMentions(from, `Makasih Nama Barunya @${sender.id.replace('@c.us','')} 😘`)
             break
 
         case '#setstatus':
-            if (!isOwner) return client.reply(from, `Perintah ini hanya bisa di gunakan oleh Owner Ucok  bot!`, id)
+            if (!isOwner) return client.reply(from, `Perintah ini hanya bisa di gunakan oleh Owner ITEUNG V2 bot!`, id)
                 const setstat = body.slice(11)
                 await client.setMyStatus(setstat)
                 client.sendTextWithMentions(from, `Makasih Status Barunya @${sender.id.replace('@c.us','')} 😘`)
             break
 
         case '#setgroupicon':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (!isGroupMsg) return client.reply(from, `Fitur ini hanya bisa di gunakan dalam group`, id)
             if (!isGroupAdmins) return client.reply(from, `Fitur ini hanya bisa di gunakan oleh admin group`, id)
             if (!isBotGroupAdmins) return client.reply(from, `Fitur ini hanya bisa di gunakan ketika bot menjadi admin`, id)
@@ -3556,9 +3556,9 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
     case '#sticker3d':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             //if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id)             
-            if (args.length === 1) return client.reply(from, 'kirim perintah dengan contoh #sticker3d Ucok ', id)
+            if (args.length === 1) return client.reply(from, 'kirim perintah dengan contoh #sticker3d ITEUNG V2', id)
             client.reply(from, mess.wait, id)
             const textnyi = body.slice(11)
             const gbrnyi = `https://docs-jojo.herokuapp.com/api/text3d?text=${textnyi}`
@@ -3566,9 +3566,9 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
     case '#stickerpetir':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             //if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id)             
-            if (args.length === 1) return client.reply(from, 'kirim perintah dengan contoh #stickerpetir Ucok ', id)
+            if (args.length === 1) return client.reply(from, 'kirim perintah dengan contoh #stickerpetir ITEUNG V2', id)
             client.reply(from, mess.wait, id)
             const texts = body.slice(14)
             const petirnyi = `https://docs-jojo.herokuapp.com/api/thunder?text=${texts}`
@@ -3576,9 +3576,9 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
     case '#stickerbp':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             //if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id)             
-            if (args.length === 1) return client.reply(from, 'kirim perintah dengan contoh #stickerbp Ucok ', id)
+            if (args.length === 1) return client.reply(from, 'kirim perintah dengan contoh #stickerbp ITEUNG V2', id)
             client.reply(from, mess.wait, id)
             const textnyu = body.slice(11)
             const bpnyi = `http://docs-jojo.herokuapp.com/api/blackpink?text=${textnyu}`
@@ -3587,9 +3587,9 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
 
     case '#stickerglitch':
     case '#stickglitch':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             //if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id)             
-            if (args.length === 1) return client.reply(from, 'kirim perintah dengan contoh #stickerglitch Ucok |robot', id)
+            if (args.length === 1) return client.reply(from, 'kirim perintah dengan contoh #stickerglitch ITEUNG V2|robot', id)
             arg = body.trim().split('|')
             client.reply(from, mess.wait, id)
             const texta = arg[1]
@@ -3600,8 +3600,8 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
 
     case '#stickerph':
     case '#stickph':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
-            if (args.length === 1) return client.reply(from, 'kirim perintah dengan contoh #stickerph Ucok |robot', id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (args.length === 1) return client.reply(from, 'kirim perintah dengan contoh #stickerph ITEUNG V2|robot', id)
             arg = body.trim().split('|')
             client.reply(from, mess.wait, id)
             const ph3 = arg[1]
@@ -3612,8 +3612,8 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
 
     case '#stickerneon':
     case '#stickneon':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
-            if (args.length === 1) return client.reply(from, 'kirim perintah dengan contoh #stickerph Ucok |robot|bot', id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (args.length === 1) return client.reply(from, 'kirim perintah dengan contoh #stickerph ITEUNG V2|robot|bot', id)
             arg = body.trim().split('|')
             client.reply(from, mess.wait, id)
             const textx = arg[1]
@@ -3624,7 +3624,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
     case '#sticker2':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (args.length == 0) return client.reply(from, `Untuk mencari sticker dari pinterest\nketik: ${prefix}sticker2 [search]\ncontoh: ${prefix}sticker2 naruto`, id)
             const cariwallu = body.slice(10)
             const hasilwallu = await images.fdci(cariwallu)
@@ -3636,7 +3636,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
 
         case '#loli':
             if (isLimit(serial)) return client.reply(from, `${ubah}Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu${ubah}`, id)
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             //if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
            await limitAdd(serial)
             //const loli = await axios.get(`https://api.vhtear.com/randomloli&apikey=${vhtearkey}`)
@@ -3785,45 +3785,6 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
         }
         break
 
-        case '#kominfo':
-            case '#infokominfo':
-                client.sendContact(chatId, `62881023273642@c.us`)
-                client.reply(from, 'itu kontaknya:) ada yang di tanyakan, harus sopan yaaa....:)', id)
-               break
-   
-   
-            case '#kemenlu':
-            case '#infokemenlu':
-                client.sendContact(chatId, `6281315038015@c.us`)
-                client.reply(from, 'itu kontaknya:) ada yang di tanyakan, harus sopan yaaa....:)', id)
-               break
-   
-   case '#aspirasi':
-           if (args.length === 1) return client.reply(from, '[❗] Kirim perintah *#aspirasi [teks]*\ncontoh : *#aspirasi hai min, apa kabar?*', id)
-           const pesan2 = body.slice(7)
-           if(!pesan2) return
-           if (isGroupMsg){
-               client.sendText(ownerNumber, `*[ASPIRASI]*\n*WAKTU : ${time}*\n*NO PENGIRIM : wa.me/${sender.id.match(/\d+/g)}*\n*GROUP : ${formattedTitle}*\n\n*ISI ASPIRASI : ${pesan2}*`)
-               client.reply(from, '*ASPIRASI ANDA AKAN SEGERA DI TANGGAPI OLEH ADMIN UCOT BOT*.' ,id)
-           }else{
-               client.sendText(ownerNumber, `*[ASPIRASI]*\n*WAKTU* : ${time}\nNO PENGIRIM : wa.me/${sender.id.match(/\d+/g)}\n\n*ISI ASPIRASI : ${pesan2}*`)
-               client.reply(from, '*ASPIRASI ANDA AKAN SEGERA DI TANGGAPI OLEH ADMIN UCOK BOT*.', id)
-           }
-           break
-   
-           case '#kritik&saran':
-           if (args.length === 1) return client.reply(from, '[❗] Kirim perintah *#kritik&saran [teks]*\ncontoh : *#kritik&saran hai admin jangan nakal yaaa!*', id)
-           const pesan3 = body.slice(7)
-           if(!pesan3) return
-           if (isGroupMsg){
-               client.sendText(ownerNumber, `*[KRITIK&SARAN]*\n*WAKTU : ${time}*\n*NO PENGIRIM : wa.me/${sender.id.match(/\d+/g)}*\n*GROUP : ${formattedTitle}*\n\n*ISI KRITIK&SARAN : ${pesan3}*`)
-               client.reply(from, '*PESAN ANDA AKAN SEGERA DI TANGGAPI OLEH ADMIN UCOK BOT*.' ,id)
-           }else{
-               client.sendText(ownerNumber, `*[KRITIK&SARAN]*\n*WAKTU* : ${time}\nNO PENGIRIM : wa.me/${sender.id.match(/\d+/g)}\n\n*ISI KRITIK&SARAN : ${pesan3}*`)
-               client.reply(from, '*PESAN ANDA AKAN SEGERA DI TANGGAPI OLEH ADMIN UCOK BOT*.', id)
-           }
-           break
-
         case '#toxic':
             if (isLimit(serial)) return client.reply(from, `${ubah}Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu${ubah}`, id)
             console.log(`Auto Toxic Sedang Dibuat.`)
@@ -3843,7 +3804,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
                 break
 
            case '#caklontong':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id) 
             if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
             if (isLimit(serial)) return client.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu`, id)
@@ -3870,7 +3831,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
            break
 
         case '#family100':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id) 
             if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
             if (isLimit(serial)) return client.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu`, id)
@@ -3897,7 +3858,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
            break
 
         case '#nomorhoki':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
             if (isLimit(serial)) return client.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu`, id)
             
@@ -3916,7 +3877,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
         case '#artimimpi':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
             if (isLimit(serial)) return client.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu`, id)
             
@@ -3935,7 +3896,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
         case `${prefix}ptlvid`:
-                if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)           
+                if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)           
                 if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id)
                 if (isLimit(serial)) return client.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu`, id)
                 if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
@@ -3948,7 +3909,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
                     break
 
         case '#kbbi':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
             if (isLimit(serial)) return client.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu`, id)
             if (args.length === 1) return client.reply(from, `Kirim perintah *#kbbi [ Query ]*\nContoh : *#kbbi asu*`, id)
@@ -3964,7 +3925,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
         case '#shorturl':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             if (!isPrem) return client.reply(from, 'Maaf, perintah ini hanya dapat dilakukan oleh user premium, untuk upgrade hubungi owner ketik *_#owner_*', id)
             if (!isGroupMsg) return client.reply(from, 'Perintah ini hanya bisa di gunakan dalam group!', id)
             if (isLimit(serial)) return client.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu`, id)           
@@ -3979,7 +3940,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
 
         case '#wa.me':
         case '#wame':
-        if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+        if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
         await client.reply(from, `*Neh Mhank Link Nomor Wa Lu ${pushname}*\n\n*wa.me/${sender.id.replace(/[@c.us]/g, '')}*\n\n*Atau*\n\n*api.whatsapp.com/send?phone=${sender.id.replace(/[@c.us]/g, '')}*`, id)
             break
 
@@ -4005,7 +3966,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
         case '#berita':
         if (!isPrem) return client.reply(from, `${ubah}Perintah ini hanya untuk user premium! hubungi owner untuk upgrade premium atau ketik #owner${ubah}`, id) 
         if (isLimit(serial)) return client.reply(from, `${ubah}Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik #limit Untuk Mengecek Kuota Limit Kamu${ubah}`, id)
-        const respons = await axios.get('http://newsapi.org//top-headlines?country=id&apiKey=b2d3b1c264c147ae88dba39998c23279')
+        const respons = await axios.get('http://newsapi.org/v2/top-headlines?country=id&apiKey=b2d3b1c264c147ae88dba39998c23279')
         const { totalResults, articles } = respons.data
         res = totalResults
         if (args[1] >= totalResults) {
@@ -4027,14 +3988,14 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
           await client.sendText(from, pesan)
           break 
         case '#spek':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             const iscas = await client.getIsPlugged() ? "charging 🔌" : "not charging 💻"
             const MyPhone = await client.getMe()
             client.sendText(from, `*INFORMASI:*\n🔋BATTERY : ${MyPhone.battery}% ${iscas}\n💻HOST : ${os.hostname()}\n📱DEVICE : ${MyPhone.phone.device_manufacturer}\n🖥PLATFORM : ${os.platform()}\n\n`, id)
             break
 
         case '#daftar':
-             if (args.length === 1) return client.reply(from, '*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#*daftar 6281374347075|Ucok |17* \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX!_*', id)
+             if (args.length === 1) return client.reply(from, '*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#*daftar 6281374347075|ITEUNG V2|17* \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX!_*', id)
             let datadaftar = JSON.parse(fs.readFileSync('./lib/daftar.json', 'utf8'))
             const no = sender.id.replace(/[@c.us]/g,'')
             const istelahdaftar = datadaftar.includes(sender.id) ? false : true
@@ -4055,12 +4016,12 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             {
             daftar.push(no+'@c.us')
             fs.writeFileSync('./lib/daftar.json', JSON.stringify(daftar))
-            client.sendFileFromUrl(from, pict, 'pfp.jpg', `*DAFTAR SUKSES DENGAN FORMAT*\n\n*User Profile* ✨ \n\n*➸ Username: ${namao}*\n\n*➸ User Info: ${status.status}*\n\n*➸ NOMOR : ${nomor}* \n\n*➸ NAMA : ${nama}* \n\n*➸ UMUR : ${umur} TAHUN* \n\n*➸ TIME : ${tgl}-${bln}-${thn}* \n\n\n*➸ [ ${daftar.length} ] PENGGUNA YANG TERDAFTAR* \n\n*➸ [ ${chati.length} ] PENGGUNA Ucok  BOT*\n\n*➸ [ ${group.length} ] GROUP Ucok  BOT* \n\n*TERIMAKASIH SUDAH IKUT BERGABUNG DI Ucok  BOT*`, id)
+            client.sendFileFromUrl(from, pict, 'pfp.jpg', `*DAFTAR SUKSES DENGAN FORMAT*\n\n*User Profile* ✨ \n\n*➸ Username: ${namao}*\n\n*➸ User Info: ${status.status}*\n\n*➸ NOMOR : ${nomor}* \n\n*➸ NAMA : ${nama}* \n\n*➸ UMUR : ${umur} TAHUN* \n\n*➸ TIME : ${tgl}-${bln}-${thn}* \n\n\n*➸ [ ${daftar.length} ] PENGGUNA YANG TERDAFTAR* \n\n*➸ [ ${chati.length} ] PENGGUNA ITEUNG V2 BOT*\n\n*➸ [ ${group.length} ] GROUP ITEUNG V2 BOT* \n\n*TERIMAKASIH SUDAH IKUT BERGABUNG DI ITEUNG V2 BOT*`, id)
              }
             break
 
         case '#reg':
-            if (!isOwner) return client.reply(from, 'Perintah ini hanya bisa di gunakan oleh Owner Ucok  BOT!', id)
+            if (!isOwner) return client.reply(from, 'Perintah ini hanya bisa di gunakan oleh Owner ITEUNG V2 BOT!', id)
            const reg = body.slice(5)
             {
             daftar.push(reg+'@c.us')
@@ -4070,9 +4031,9 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
         case '#listdaftar':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
-            if (!isOwner) return client.reply(from, 'Perintah ini hanya bisa di gunakan oleh Owner Ucok  BOT!', id)
-            let ld = `INI ADALAH USER YANG SUDAH DAFTAR DI Ucok  BOT\nTotal : ${daftar.length}\n`
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isOwner) return client.reply(from, 'Perintah ini hanya bisa di gunakan oleh Owner ITEUNG V2 BOT!', id)
+            let ld = `INI ADALAH USER YANG SUDAH DAFTAR DI ITEUNG V2 BOT\nTotal : ${daftar.length}\n`
             for (let i of daftar) {
                 ld += `➸ ${i.replace(/@c.us/g,'')}\n`
             }
@@ -4082,8 +4043,8 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
         case 'halo bot':
         case 'ini bot?':
         case 'bg':
-        case 'Ucok ':
-        case 'bg Ucok ':
+        case 'ITEUNG V2':
+        case 'bg ITEUNG V2':
         case 'hai':
         case 'cok':
         case 'cuk':
@@ -4118,8 +4079,8 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
         case 'halo bot apa kabar?':
         case '*ini bot apa kabar?*':
         case '*bg apa kabar?*':
-        case '*apa kabar Ucok?*':
-        case '*bg Ucok apa kabar?*':
+        case '*apa kabar iteung?*':
+        case '*bg iteung apa kabar?*':
         case '*hai apa kabar?*':
         case '*cok apa kabar?*':
         case '*cuk apa kabar?*':
@@ -4147,15 +4108,74 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
              client.reply(from, `sama-sama bestie, semoga hari mu menyenangkan`, id)
              break
 
+            case '#kominfo':
+            case '#infokominfo':
+            client.sendContact(chatId, `62881023273642@c.us`)
+            client.reply(from, 'itu kontaknya:) ada yang di tanyakan, harus sopan yaaa....:)', id)
+               break
+   
+   
+        case '#kemenlu':
+        case '#infokemenlu':
+            client.sendContact(chatId, `6281321440343@c.us`)
+            client.reply(from, 'itu kontaknya:) ada yang di tanyakan, harus sopan yaaa....:)', id)
+               break
+
+        case '#kemendagri':
+        case '#infokemendagri':
+            client.sendContact(chatId, `6281315038015@c.us`)
+            client.reply(from, 'itu kontaknya:) ada yang di tanyakan, harus sopan yaaa....:)', id)
+                break  
+   
+        case '#aspirasi':
+            if (args.length === 1) return client.reply(from, '[❗] Kirim perintah *#aspirasi [teks]*\ncontoh : *#aspirasi hai min, apa kabar?*', id)
+              const pesan2 = body.slice(7)
+            if(!pesan2) return
+            if (isGroupMsg){
+            client.sendText(ownerNumber, `*[ASPIRASI]*\n*WAKTU : ${time}*\n*NO PENGIRIM : wa.me/${sender.id.match(/\d+/g)}*\n*GROUP : ${formattedTitle}*\n\n*ISI ASPIRASI : ${pesan2}*`)
+            client.reply(from, '*ASPIRASI ANDA AKAN SEGERA DI TANGGAPI OLEH ADMIN UCOT BOT*.' ,id)
+                 }else{
+            client.sendText(ownerNumber, `*[ASPIRASI]*\n*WAKTU* : ${time}\nNO PENGIRIM : wa.me/${sender.id.match(/\d+/g)}\n\n*ISI ASPIRASI : ${pesan2}*`)
+            client.reply(from, '*ASPIRASI ANDA AKAN SEGERA DI TANGGAPI OLEH ADMIN UCOK BOT*.', id)
+                 }
+            break
+
+        case '#kritik&saran':
+                if (args.length === 1) return client.reply(from, '[❗] Kirim perintah *#kritik&saran [teks]*\ncontoh : *#kritik&saran hai admin jangan nakal yaaa!*', id)
+                 const pesan3 = body.slice(7)
+                 if(!pesan3) return
+                 if (isGroupMsg){
+                 client.sendText(ownerNumber, `*[KRITIK&SARAN]*\n*WAKTU : ${time}*\n*NO PENGIRIM : wa.me/${sender.id.match(/\d+/g)}*\n*GROUP : ${formattedTitle}*\n\n*ISI KRITIK&SARAN : ${pesan3}*`)
+                 client.reply(from, '*PESAN ANDA AKAN SEGERA DI TANGGAPI OLEH ADMIN UCOK BOT*.' ,id)
+                 }else{
+                client.sendText(ownerNumber, `*[KRITIK&SARAN]*\n*WAKTU* : ${time}\nNO PENGIRIM : wa.me/${sender.id.match(/\d+/g)}\n\n*ISI KRITIK&SARAN : ${pesan3}*`)
+                client.reply(from, '*PESAN ANDA AKAN SEGERA DI TANGGAPI OLEH ADMIN UCOK BOT*.', id)
+                 }
+                 break
+
+        case '#petakampus':
+            client.sendImage(from, './media/img/ULBI.jpg', id)
+                client.reply(from, `BERIKUT PETA KAMPUS ✨  \nUniversitas Logistik dan Bisnis Internasional (ULBI)
+                    \n0811-2267-778
+                    \nhttps://maps.app.goo.gl/1qEK8S2fvYifLr5V9?g_st=ic `, id)
+                await client.reply(from, `*TERIMAKSIH SUDAH BERTANYA, HATI-HATI DIJALAN DAN SAMPAI BERTEMU*.` ,id)
+                    break
+        
+
+        case 'sayang':
+            client.sendImage(from, './media/img/after.jpg', id)
+                    client.reply(from, `sayang bangetzz`, id)
+                    break
+
         case '#help':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             const no2 = sender.id.replace(/[@c.us]/g,'')
             var pict = await client.getProfilePicFromServer(no2)
             client.sendFileFromUrl(from, pict, 'pfp.jpg', `════════════════\n'''HAI MAU MINTA TOLONG APA?'''\n\n════════════════\n\n*NAMA : ${pushname}*\n\n════════════════\n\n*UNTUK MELIHAT MENU KETIK* #menu sayang...\n\n`)
             break
 
         case '#menu':
-            if (!isdaftar) return client.reply(from, `${ubah}*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 6281374347075|Ucok |17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*${ubah}`, id)
+            if (!isdaftar) return client.reply(from, `${ubah}*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 6281374347075|ITEUNG V2|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*${ubah}`, id)
             client.sendText(from, help)
             break
 
@@ -4209,7 +4229,7 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             break
 
         case '#cmd':
-            if (!isdaftar) return client.reply(from, `${ubah}*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 6281374347075|Ucok |17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*${ubah}`, id)
+            if (!isdaftar) return client.reply(from, `${ubah}*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 6281374347075|ITEUNG V2|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*${ubah}`, id)
             client.reply(from, cmd, id)
             break
 
@@ -4247,167 +4267,167 @@ WHATSAPP   : https://wa.me/6281374347075\nJangan Lupa bantu subscribe follow ya 
             client.sendPtt(from, './mp3/penantian.mp3', id)
             break
     case 'halo':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/tapi boong.mpeg', id)
             break
         case 'hallo':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/dalem sayang.mpeg', id)
             break
         case '*ikan*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/ikan hiu makan tomat.mp3', id)
             break
         case '*jujur*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/jujur sa su bilang.mp3', id)
             break
         case '*karna*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/karena ada ko.mp3', id)
             break
         case '*pergi*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/kini ku tlah pergi.mp3', id)
             break
         case '*brubah*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/ko langsung brubah.mp3', id)
             break
         case '*kopidangdut*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/kopi dangdut koplo.mp3', id)
             break
         case '*kopidangdut2*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/kopi dangdut.mp3', id)
             break
         case '*kutimangtimang*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/kutimang timang adik ku sayang.mp3', id)
             break
         case '*lupakanlah*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/lupakanlah semua.mp3', id)
             break
         case '*menantikoplo*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/menanti koplo.mp3', id)
             break
         case '*penantian*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/penantian.mp3', id)
             break
         case '*perlahan*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/perlahan.mp3', id)
             break
         case '*sapamit*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/sa pamit mu pulang.mp3', id)
             break
         case '*bosanko*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/sayang kalao ko bosan ko bilang.mp3', id)
             break
         case '*yangkuberikan*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/semua yang tlah ku berikan.mp3', id)
             break
         case '*kesepian*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/sephia kesepian.mp3', id)
             break
         case '*mangkadadang*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/tiap hari mangkadadang.mp3', id)
             break
         case '*tibangbang*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/tibang bang.mp3', id)
             break
         case '*mencintaimu*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/aku mentaimu.mp3', id)
             break
         case '*alealemilo*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/aleale milo.mp3', id)
             break
         case '*amongus*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/among us 2.mp3', id)
             break
         case '*amongus2*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/among us.mp3', id)
             break
         case '*atmyworst*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/atmyworst.mpeg', id)
             break
         case '*potapota*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/potapota.mp3', id)
             break
         case '*djpotapota*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/djpotapota.mp3', id)
             break
         case '*berentikasihan*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/berentikasihan.mpeg', id)
             break
         case '*djodaing*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/djodaing.mpeg', id)
             break
         case '*kangcopet*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/kangcopet.mpeg', id)
             break
         case '*djbgjono*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/djbgjono.mpeg', id)
             break
         case '*maduaholong*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/maduaholong.mpeg', id)
             break
         case '*memoriberkasih*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/memoriberkasih.mpeg', id)
             break
         case '*youbroke*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/youbroke.mpeg', id)
             break
         case '*djkeringetan*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/djkeringetan.mpeg', id)
             break
         case '*harus*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/harus.mpeg', id)
             break
         case '*karnaadako*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/karnaadako.mpeg', id)
             break
         case '*melepaskanmu*':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/melepaskanmu.mpeg', id)
             break
         case 'hai':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/dalem sayang.mpeg', id)
             break
         case 'iri':
-            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI Ucok  BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
+            if (!isdaftar) return client.reply(from, `*NOMOR KAMU BELUM TERDAFTAR DI ITEUNG V2 BOT* \n\n*SILAHKAN LAKUKAN PENDAFTARAN DENGAN CARA KETIK* \n\n#daftar nomor|nama|umur \n\nCONTOH : \n\n#daftar 62812XXXXXXX|UCOK|17 \n\n*_PENULISAN NOMOR HARUS MENGGUNAKAN 62812XXXXX_*`, id)
             client.sendPtt(from, './mp3/iri.mpeg', id)
             break
             default:
-            client.reply(from, `${ubah}BOT INI MENGGUNAKAN PREFIX${ubah} #\n\n${ubah}INI ADALAH Ucok  BOT UNTUK MENAMPILKAN MENU KETIK${ubah} *#menu*\n\n${ubah}YANG BELUM DAFTAR KETIK${ubah} *#daftar*\n\n${ubah}JOIN GRUB Ucok  BOT KETIK${ubah} *#Ucokgroup*\n ${ubah}ADA PERTANYAAN HUBUNGI OWNER BOT${ubah} https://wa.me/6281374347075 CARA PENGGUNAAN BOT : https://docs.google.com/document/d/e/2PACX-1vSJEllKbi4Hr69Yg39N9djObsuYkwRgyvU-LYB4JPT98cVktI9wcy40zixQWCZ5fsJlD0MYTuuzEn/pub`, id)
+            client.reply(from, `${ubah}BOT INI MENGGUNAKAN PREFIX${ubah} #\n\n${ubah}INI ADALAH ITEUNG V2 BOT UNTUK MENAMPILKAN MENU KETIK${ubah} *#menu*\n\n${ubah}YANG BELUM DAFTAR KETIK${ubah} *#daftar*\n\n${ubah}JOIN GRUB ITEUNG V2 BOT KETIK${ubah} *#ITEUNGV2group*\n ${ubah}ADA PERTANYAAN HUBUNGI OWNER BOT${ubah} https://wa.me/6281374347075 CARA PENGGUNAAN BOT : https://docs.google.com/document/d/e/2PACX-1vSJEllKbi4Hr69YV2g39N9djObsuYkwRgyvU-LYB4JPT98cVktI9wcy40zixQWCZ5fsJlD0MYTuuzEn/pub`, id)
             if (command.startsWith('#')) {
                 client.reply(from, `Maaf ${pushname}, Command *${args[0]}* Tidak Terdaftar Di Dalam *#menu*`, id)
             }
